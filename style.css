@@ -59,6 +59,10 @@ a{
 
 a:hover{ text-decoration: underline;}
     
+main{
+    height: auto;
+    min-height: 60vh;
+}
 
 /* NAV */
 
@@ -399,6 +403,37 @@ footer{
     padding: 0 8px ;
 }
 
+.books__loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: #7342d6;
+    padding-top: 60px;
+}
+
+.books__loading--spinner{
+    display: none !important;
+}
+
+.books__loading .books__loading--spinner{
+    display: block !important;
+}
+
+.fa-spinner {
+
+    animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform:  rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* TABLETS */
 
@@ -445,4 +480,20 @@ footer{
     .highlight:not(:last-child){
         margin-bottom: 24px;
     }
+}
+
+/* 
+
+BOOKS BROWSER
+
+*/
+
+.books__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.books__header--title{
+    margin-bottom: 0 ;
 }
